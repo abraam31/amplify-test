@@ -1,0 +1,588 @@
+﻿
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DataWorx</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="assets/css/new.css" />
+      </head>
+      <body>
+        <div class="container-fluid">
+          <div class="header">
+            <img src="assets/img/logo 1.png" alt="logo" />
+          </div>
+          <div class="row mt-30 content-container">
+            <div class="col-md-8 col-sm-12">
+              <div class="row fields-container-wrapper">
+                <div class="title-row" style="visibility: hidden">
+                  <div class="col-12">Target: {targetvar}</div>
+                </div>
+                <form class="crow" name="myForm" id="myForm">
+                <div class="row fields-container">
+              
+    
+    
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>CATCH PRICE:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="1.0"
+                  max="4047.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="catch price" 
+                  id="catch price"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>CHEAPEST COMPETITOR:</label>
+              <div class="test">
+                <select name="cheapest competitor" id="cheapest competitor" class="form-select">
+                  <option value="">--Select--</option>
+                  <option value="amazon.com.au">amazon.com.au</option><option value="buybox">buybox</option><option value="pet circle">pet circle</option><option value="kogan.com">kogan.com</option><option value="binglee.com.au">binglee.com.au</option><option value="myer.com.au">myer.com.au</option><option value="harveynorman.com.au">harveynorman.com.au</option><option value="officeworks.com.au">officeworks.com.au</option><option value="bigw.com.au">bigw.com.au</option><option value="jbhifi.com.au">jbhifi.com.au</option><option value="thegoodguys.com.au">thegoodguys.com.au</option><option value="kitchenwarehouse.com.au">kitchenwarehouse.com.au</option><option value="ebgames.com.au">ebgames.com.au</option><option value="target.com.au">target.com.au</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>CHEPEAST COMPETITOR:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="0.0"
+                  max="3999.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="chepeast competitor" 
+                  id="chepeast competitor"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>COST PRICE ($):</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="0.01"
+                  max="3745.5"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="cost price ($)" 
+                  id="cost price ($)"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>COST VS CHEPEAST COMPETITOR:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="0.0"
+                  max="3746.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="cost vs chepeast competitor" 
+                  id="cost vs chepeast competitor"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>DESCRIPTION:</label>
+              <div class="test">
+                <input type="text" name="description" id="description" class="form-select">
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>IS CATCH COMPETITIVE:</label>
+              <div class="test">
+                <select name="is catch competitive" id="is catch competitive" class="form-select">
+                  <option value="">--Select--</option>
+                  <option value="competitive">competitive</option><option value="uncompetitive">uncompetitive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>MARGIN(%):</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="-7.33"
+                  max="1.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="margin(%)" 
+                  id="margin(%)"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label>MONTH, DAY, YEAR OF SNAPSHOT DATE:</label>
+                <div class="test">
+                  <input type="date" name="month, day, year of snapshot_date" class="form-control" >
+                </div>
+              </div>
+            </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>NUMBER OF COMPETITORS WITH CHEAPEST PRICE:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="1"
+                  max="8"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="number of competitors with cheapest price" 
+                  id="number of competitors with cheapest price"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>QTY CHANGE(%):</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="-1.0"
+                  max="3.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="qty change(%)" 
+                  id="qty change(%)"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>SOH:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="2"
+                  max="15312"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="soh" 
+                  id="soh"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-group">
+              <label>VARIANCE FROM COMPETITOR:</label>
+              <div class="test">
+                <input
+                  type="range"
+                  min="0.0"
+                  max="4047.0"
+                  step="0.1"
+                  class="range-input "
+                  oninput="this.nextElementSibling.value=this.value"
+                />
+                <input
+                  type="text"
+                  name="variance from competitor" 
+                  id="variance from competitor"
+                  size="3"
+                  class="range-output numeric-field"
+                />
+              </div>
+            </div>
+          </div>
+        
+        
+        <input type="hidden" value="0" id="counter">
+        </div>
+        </form>
+        <div class="btn-container">
+          <button type="button" class="btn btn-danger" tid="target3" onclick="predict()">Predict</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="row results-container-wrapper">
+        <div class="title-row">
+          <div class="col-12">Target: 1 week qty sold</div>
+        </div>
+        <div class="row">
+          <div class="results-container">
+            <div class="no-prediction" id="no-prediction" >
+              <!-- 
+              <h2 class="mb-5 mt-5">You haven't made any calculation</h2>
+              <p class="mb-5 mt-5">
+                Change parameters and press predict and the data will show
+                here
+              </p>
+              -->
+              <img src="assets/img/simple-msg.png">
+              
+            </div>
+            <div class="predictions" id="table-result">
+              <div class="row" style="display: none;"></div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="btn btn-secondary" disabled id="export-to-csv-btn" onclick="DownloadJSON2CSV()">
+              <i class="fas fa-save"></i> EXPORT TO CSV
+            </button>
+          </div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				&copy;2020 DataWorx - All Rights Reserved - Developed by Hany Hossny
+			</div>
+		</div>
+  
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js"></script>
+      
+    
+      <script>
+
+       // fields input range js start
+       function isOlderEdgeOrIE() {
+				return (
+					window.navigator.userAgent.indexOf("MSIE ") > -1 ||
+					!!navigator.userAgent.match(/Trident.*rv\:11\./) ||
+					window.navigator.userAgent.indexOf("Edge") > -1
+				);
+			}
+
+			function valueTotalRatio(value, min, max) {
+				return ((value - min) / (max - min)).toFixed(2);
+			}
+
+			function getLinearGradientCSS(ratio, leftColor, rightColor) {
+				return [
+					"-webkit-gradient(",
+					"linear, ",
+					"left top, ",
+					"right top, ",
+					"color-stop(" + ratio + ", " + leftColor + "), ",
+					"color-stop(" + ratio + ", " + rightColor + ")",
+					")",
+				].join("");
+			}
+
+			function updateRangeEl(rangeEl) {
+				var ratio = valueTotalRatio(rangeEl.value, rangeEl.min, rangeEl.max);
+
+				rangeEl.style.backgroundImage = getLinearGradientCSS(
+					ratio,
+					"#ff0000",
+					"#979797"
+				);
+			}
+
+			function initRangeEl() {
+				var rangeEl = document.getElementsByClassName("range-input");
+				for (var i = 0; i < rangeEl.length; i++) {
+					/**
+					 * IE/Older Edge FIX
+					 * On IE/Older Edge the height of the <input type="range" />
+					 * is the whole element as oposed to Chrome/Moz
+					 * where the height is applied to the track.
+					 *
+					 */
+					if (isOlderEdgeOrIE()) {
+						rangeEl[i].style.height = "20px";
+						// IE 11/10 fires change instead of input
+						// https://stackoverflow.com/a/50887531/3528132
+						rangeEl[i].addEventListener("change", function (e) {  });
+						rangeEl[i].addEventListener("input", function (e) {  });
+					} else {
+						updateRangeEl(rangeEl[i]);
+						rangeEl[i].addEventListener("input", function (e) {
+							updateRangeEl(e.target);
+						});
+					}
+				}
+			}
+			initRangeEl();
+       // fields input range js end
+
+            
+        var prediction_results = []
+        // get all the inputs into an array. and store the fields types at the first row in prediction results
+          var $inputs = $('#myForm :input');
+    
+          // not sure if you wanted this, but I thought I'd add it.
+          // get an associative array of just the values.
+			function escape( s ){
+				 if (s == null) { // test for null or undefined
+						return null;
+					}
+					return s.replace(/&/g, '%26;');
+			}   
+          var values = {};
+          values["id"] = "id";
+          $inputs.each(function() {
+              if(this.name !== "")
+                values[this.name] = this.name;
+          });
+          values["prediction"] = "prediction";
+          prediction_results.push(values);
+         
+    
+        function predict() {
+          // getting the counter value for indexing of the data
+          let counter = $("#counter").val();
+          $("#counter").val(Number($("#counter").val()) + Number(1));
+          
+          // get all the inputs into an array.
+          var $inputs = $('#myForm :input');
+    
+          // not sure if you wanted this, but I thought I'd add it.
+          // get an associative array of just the values.
+          var values = {};
+          values["id"] = counter;
+          // store unselected fields to show warning message
+          var unselected_fields = "";
+          var ajax_url_data = "";
+          $inputs.each(function() {
+              if(this.name !== ""){
+                if($(this).val() == ""){
+                  values[this.name] = null;
+                }
+                else{
+                  values[this.name] = $(this).val();
+                }
+                if(!$(this).hasClass("numeric-field") && values[this.name] != null){
+                  ajax_url_data += '\"'+ this.name + '\":\"' + escape($(this).val()) + '\",'; 
+                }
+                else{
+                  ajax_url_data += '\"'+ this.name + '\":\"' + escape(values[this.name]) + '\",'; 
+                  var replacement = '';
+                  var pos = ajax_url_data.lastIndexOf('"');
+                  ajax_url_data = ajax_url_data.substring(0,pos) + replacement + ajax_url_data.substring(pos+1);
+                  var pos = ajax_url_data.lastIndexOf('"');
+                  ajax_url_data = ajax_url_data.substring(0,pos) + replacement + ajax_url_data.substring(pos+1);
+                }
+                if($(this).val() == ""){
+                  unselected_fields += this.name + ", ";
+                }
+              }
+          });
+          // check is number
+          function isNumeric(str) {
+            if (typeof str != "string") return false // we only process strings!  
+            return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+                  !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+          }
+    
+          // removing last , from ajax_url_data
+          ajax_url_data = ajax_url_data.slice(0, -1);
+          console.log("http://127.0.0.1:5000/predictTarget/?inputs={"+ajax_url_data+"}&pipeline_file_path=data_temp/catch_prices_2022_11_01_16_24//catch_prices_model_pipeline.py");
+    
+          // removing last , from unselected_fields
+          var replacement = '';
+          var pos = unselected_fields.lastIndexOf(',');
+          unselected_fields = unselected_fields.substring(0,pos) + replacement + unselected_fields.substring(pos+1);
+          if(unselected_fields.length > 1){
+            if(!confirm("[" +unselected_fields+ "] are not selected.\n\nAre you sure you want to predict without setting their values?" )) {
+              return;
+            } 
+          }
+    
+          // prediction results 
+          var settings = {
+          "url": "http://127.0.0.1:5000/predictTarget/?inputs={"+ajax_url_data+"}&pipeline_file_path=data_temp/catch_prices_2022_11_01_16_24//catch_prices_model_pipeline.py",
+          "method": "POST",
+          "timeout": 0,
+          async: false,
+        };
+        var prediction_values = "";
+    
+         $.ajax(settings).done(function (response) {
+          prediction_values = response;
+         });
+          console.log(prediction_values);
+    
+          values["prediction"] = prediction_values;
+          prediction_results.push(values);
+          var str_values = JSON.stringify(values, null, 20);
+          
+          // hide the no data available row
+          $("#no-prediction").hide();
+          $("#export-to-csv-btn").removeAttr("disabled");
+          $("#export-to-csv-btn").addClass("export-btn");
+
+          $("#table-result .row:first").before('<div class="row"  id='+counter+'><div class="col-5 prediction-text">'+prediction_values+'</div><div class="col-7 prediction-btn"><div class="btn" data-bs-toggle="modal" data-bs-target="#model'+counter+'"> <i class="fa fa-eye p-2 bg-success text-white"></i> </div> <div class="btn"><i class="fa fa-trash p-2 bg-danger text-white" onclick="remove_row('+counter+')"></i></div></div>');
+          $("#models").append('<div class="modal fade" id="model'+counter+'" tabindex="-1" role="dialog" aria-labelledby="model'+counter+'Title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header" style="border: none !important"><h5 class="modal-title" id="exampleModalLongTitle"></h5><button style="border: none; background-color: transparent" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button></div><div class="modal-body" id="model-body"><h4 class="text-center" style="margin-top: -30px">Prediction details</h4><div class="table-container"><table id="model-table'+counter+'" class="table text-center"><thead><tr><th style="width: 45%">Parameter</th><th style="width: 45%">Value</th></tr></thead><tbody></tbody></table></div></div><h4 class="text-center" style="margin: 10px 0px 30px 0px">Prediction: '+prediction_values+'</h4></div></div></div>');
+    
+          for(var key in values) {
+            if(key !== "id"){ 
+              if([].includes(key)){ 
+                if(values[key] == 0){ 
+                  $("#model-table"+counter+ " tbody").append("<tr><td style='text-align: center'>"+ key +"</td><td style='text-align: center'>No</td></tr>");
+                }
+                else if(values[key] == 1){ 
+                  $("#model-table"+counter+ " tbody").append("<tr><td style='text-align: center'>"+ key +"</td><td style='text-align: center'>Yes</td></tr>");
+                }
+                else{ 
+                  $("#model-table"+counter+ " tbody").append("<tr><td style='text-align: center'>"+ key +"</td><td style='text-align: center'>"+values[key]+"</td></tr>");
+                }
+              }
+              else{ 
+                  $("#model-table"+counter+ " tbody").append("<tr><td style='text-align: center'>"+ key +"</td><td style='text-align: center'>"+values[key]+"</td></tr>");
+                }
+            }
+          }
+        }
+    
+        function remove_row(counter) {
+          $('#'+counter).remove();
+          // show the no data available row if there is no records
+          if($('#table-result .row').length == 1){
+            $(".no-prediction").show();
+            $("#export-to-csv-btn").attr("disabled", true);
+            $("#export-to-csv-btn").removeClass("export-btn");
+          }
+          for(let i=0; i<prediction_results.length; i++){
+            if(prediction_results[i]["id"] == counter){
+              prediction_results.splice(i,1);
+            }
+          }
+        }
+    
+        function DownloadJSON2CSV()
+        {
+            if(prediction_results.length <= 1){
+              alert("You did not make any predictions.");
+              return;
+            }
+            var array =  prediction_results;
+    
+            var str = '';
+    
+            for (var i = 0; i < array.length; i++) {
+                var line = '';
+    
+                for (var index in array[i]) {
+                    line += array[i][index] + ',';
+                }
+    
+                // Here is an example where you would wrap the values in double quotes
+                // for (var index in array[i]) {
+                //    line += '"' + array[i][index] + '",';
+                // }
+    
+                line.slice(0,line.Length-1); 
+    
+                str += line + '\r\n';
+            }
+            window.open( "data:text/csv;charset=utf-8," + escape(str))
+        }
+    
+      </script>
+    </body>
+    <div id="models"></div>
+      
+    
+    </html>
+    
